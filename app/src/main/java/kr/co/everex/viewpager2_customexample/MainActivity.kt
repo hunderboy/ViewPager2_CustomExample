@@ -19,12 +19,10 @@ class MainActivity : AppCompatActivity() {
         binding.button1.setOnClickListener{
             val intent = Intent(this, ViewPager2TestActivity::class.java)
             startActivity(intent)
-            finish()// 화면 종료
         }
         binding.button2.setOnClickListener{
             val intent = Intent(this, ViewPager2AndTabActivity::class.java)
             startActivity(intent)
-            finish()// 화면 종료
         }
 
 

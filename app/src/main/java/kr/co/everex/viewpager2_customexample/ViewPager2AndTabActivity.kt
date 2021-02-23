@@ -42,7 +42,7 @@ class ViewPager2AndTabActivity : AppCompatActivity() {
 
         // ViewPager2 설정
         val pagerAdapter = PagerAdapter(this)
-        binding.viewPager2Container.isUserInputEnabled = true // 스크롤 허용
+        binding.viewPager2Container.isUserInputEnabled = false // 스크롤 허용
         binding.viewPager2Container.adapter = pagerAdapter
 
         // TabLayout과 ViewPager 매칭

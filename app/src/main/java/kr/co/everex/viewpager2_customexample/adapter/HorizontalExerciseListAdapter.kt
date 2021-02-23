@@ -4,10 +4,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.thcompany.smartkneewalk.R
-import com.thcompany.smartkneewalk.`interface`.MyRecyclerviewInterface
-import com.thcompany.smartkneewalk.model.HorizontalExerciseListModel
-import com.thcompany.smartkneewalk.viewholder.HorizontalExerciseListViewHolder
+import kr.co.everex.viewpager2_customexample.R
+import kr.co.everex.viewpager2_customexample.`interface`.MyRecyclerviewInterface
+import kr.co.everex.viewpager2_customexample.model.HorizontalExerciseListModel
+import kr.co.everex.viewpager2_customexample.viewholder.HorizontalExerciseListViewHolder
 
 /**
  * 생성일 : 2021-02-20
@@ -46,7 +46,7 @@ class HorizontalExerciseListAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HorizontalExerciseListViewHolder {
         // 연결할 레이아웃 설정
         return HorizontalExerciseListViewHolder(LayoutInflater.from(parent.context).
-        inflate(R.layout.item_horizontal_exercise, parent, false), this.myRecyclerviewInterface!!)
+        inflate(R.layout.item_achievement_rate_vertical_bar, parent, false), this.myRecyclerviewInterface!!)
     }
 
     // 목록의 아이템수
