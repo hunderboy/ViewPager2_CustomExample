@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/exercise_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="5주"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_exercise_item"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:max="1000"
+
+            android:maxHeight="60dp"
+            android:minHeight="60dp"
+
+            android:secondaryProgress="0"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_tranperency"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+
+<!--<com.google.android.material.imageview.ShapeableImageView-->
+<!--android:id="@+id/exercise_img"-->
+<!--android:layout_width="150dp"-->
+<!--android:layout_height="100dp"-->
+<!--android:background="@drawable/radius_white_button"-->
+<!--android:scaleType="centerCrop"-->
+<!--android:layout_marginStart="@dimen/margin_6"-->
+<!--android:layout_marginEnd="@dimen/margin_6"-->
+
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:shapeAppearanceOverlay="@style/round_imageview_item" />-->
