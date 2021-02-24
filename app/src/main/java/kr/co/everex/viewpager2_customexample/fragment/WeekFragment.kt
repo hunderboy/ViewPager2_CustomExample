@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import kr.co.everex.viewpager2_customexample.`interface`.MyRecyclerviewInterface
 import kr.co.everex.viewpager2_customexample.adapter.HorizontalExerciseListAdapter
+import kr.co.everex.viewpager2_customexample.adapter.MultiViewTypeAdapter
 import kr.co.everex.viewpager2_customexample.databinding.FragmentWeekBinding
 import kr.co.everex.viewpager2_customexample.model.HorizontalExerciseListModel
 
@@ -20,9 +21,9 @@ class WeekFragment : Fragment(), MyRecyclerviewInterface {
 
 
     // 데이터 아이템 리스트
-    var curriculumList = ArrayList<HorizontalExerciseListModel>()
+    private var curriculumList = ArrayList<HorizontalExerciseListModel>()
     // 리사이클러뷰 어댑터
-    private lateinit var horizontalExerciseListAdapter: HorizontalExerciseListAdapter
+    private lateinit var multiViewTypeAdapter: MultiViewTypeAdapter
 
 
     override fun onCreateView(
@@ -31,8 +32,6 @@ class WeekFragment : Fragment(), MyRecyclerviewInterface {
     ): View? {
         _binding = FragmentWeekBinding.inflate(inflater, container, false)
         val view = binding.root
-
-
 
         // Model 데이터 설정
         for (i in 1..5){
@@ -47,20 +46,34 @@ class WeekFragment : Fragment(), MyRecyclerviewInterface {
         // 가로 리사이클러뷰
         // 어답터 인스턴스 생성
          */
-        horizontalExerciseListAdapter = HorizontalExerciseListAdapter(this)
-        horizontalExerciseListAdapter.submitList(curriculumList)
+        multiViewTypeAdapter = MultiViewTypeAdapter(this,curriculumList)
+
         // 리사이클러뷰 설정
         binding.recyclerViewList.apply {
             // 리사이클러뷰 방향 등 설정
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             // 어답터 장착
-            adapter = horizontalExerciseListAdapter
+            adapter = multiViewTypeAdapter
         }
-
-
 
         return view
     }
+
+
+    override fun onItemClicked(position: Int) {
+        Log.e(TAG, "WeekFragment - onItemClicked() called / position: $position")
+        // 클릭시 해당 아이템의 뷰타입 변경하면서
+        // 해당 아이템 뷰 변경
+        if(multiViewTypeAdapter.list[position].type == HorizontalExerciseListModel.SINGLE_TYPE){
+            multiViewTypeAdapter.list[position].type = HorizontalExerciseListModel.MULTI_TYPE
+            multiViewTypeAdapter.notifyItemChanged(position) // 데이터 변경 적용
+        }
+        else if(multiViewTypeAdapter.list[position].type == HorizontalExerciseListModel.MULTI_TYPE){
+            multiViewTypeAdapter.list[position].type = HorizontalExerciseListModel.SINGLE_TYPE
+            multiViewTypeAdapter.notifyItemChanged(position) // 데이터 변경 적용
+        }
+    }
+
 
     private fun weekWhen(a: Any): String {
         return when (a) {
@@ -74,18 +87,9 @@ class WeekFragment : Fragment(), MyRecyclerviewInterface {
         }
     }
 
-
-
-    override fun onItemClicked(position: Int) {
-        Log.d(TAG, "HomeFragment - onItemClicked() called / position: $position")
-    }
-
-
     // Fragment에서 ViewBinding 사용 시 문제되는 메모리 누수 방지를 위해 꼭 View를 해제 해준다.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

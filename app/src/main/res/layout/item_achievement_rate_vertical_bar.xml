@@ -9,7 +9,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="100dp"
+        android:layout_width="105dp"
         android:layout_height="150dp">
 
         <TextView
@@ -34,8 +34,8 @@
             android:minHeight="8dp"
 
             android:max="100"
-            android:secondaryProgress="60"
-            android:progress="30"
+            android:secondaryProgress="90"
+            android:progress="50"
 
             android:progressDrawable="@drawable/progress_tranperency"
 
