@@ -7,7 +7,6 @@
     tools:context=".ViewPager2AndTabActivity">
 
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2_container"
         android:layout_width="match_parent"
@@ -26,29 +25,28 @@
         android:layout_height="20dp"
         android:background="@color/tranperency"
 
+        app:tabTextColor="@color/black"
+        app:tabIndicatorColor="@color/colorIntro"
+
         app:layout_constraintEnd_toEndOf="@+id/viewPager2_container"
         app:layout_constraintTop_toTopOf="@+id/viewPager2_container"
         app:tabIndicatorFullWidth="false"
         app:tabTextAppearance="@style/tabitem_TextStyle">
-
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Today" />
-
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:text="Week" />
-
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:text="Month" />
     </com.google.android.material.tabs.TabLayout>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
