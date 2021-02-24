@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ViewPager2AndTabActivity::class.java)
             startActivity(intent)
         }
+        binding.button3.setOnClickListener{
+            val intent = Intent(this, TestCoroutineActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
