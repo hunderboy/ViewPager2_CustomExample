@@ -62,5 +62,6 @@ dependencies {
     // Glide - 이미지 처리
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-
+    // 비밀번호 암호화
+    implementation group: 'de.svenkubiak', name: 'jBCrypt', version: '0.4.1'
 }
