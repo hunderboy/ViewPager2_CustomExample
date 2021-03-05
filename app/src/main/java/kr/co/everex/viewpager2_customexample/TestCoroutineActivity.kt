@@ -30,8 +30,8 @@ class TestCoroutineActivity : AppCompatActivity() {
 
 
     val retrofit = Retrofit.Builder().baseUrl("http://localhost:3000")
-        .addConverterFactory(GsonConverterFactory.create()).build();
-    val service = retrofit.create(RetrofitNetwork::class.java);
+        .addConverterFactory(GsonConverterFactory.create()).build()
+    val service = retrofit.create(RetrofitNetwork::class.java)
 
 
 
