@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="105dp"
+        android:layout_height="150dp">
+
+        <TextView
+            android:id="@+id/week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5주"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:maxWidth="120dp"
+            android:minWidth="120dp"
+            android:maxHeight="8dp"
+            android:minHeight="8dp"
+
+            android:max="100"
+            android:secondaryProgress="60"
+            android:progress="30"
+
+            android:progressDrawable="@drawable/progress_tranperency"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week" />
+
+        <ProgressBar
+            android:id="@+id/vertical_progressbar"
+            android:layout_width="12dip"
+            android:layout_height="300dip"
+            style="@style/Widget.ProgressBar.Vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week"
+            />
+
+        <!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar2"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+<!--            android:layout_marginEnd="60dp"-->
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="70"-->
+<!--            android:progress="20"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar3"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+<!--            android:layout_marginEnd="30dp"-->
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="90"-->
+<!--            android:progress="70"-->
+
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar4"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="95"-->
+<!--            android:progress="88"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar5"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+<!--            android:layout_marginStart="30dp"-->
+
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="50"-->
+<!--            android:progress="45"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar6"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+<!--            android:layout_marginStart="60dp"-->
+
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="74"-->
+<!--            android:progress="61"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar7"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:rotation="270"-->
+<!--            android:layout_marginStart="90dp"-->
+
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="80"-->
+<!--            android:progress="30"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+
+
+        <!--        android:rotation="270"-->
+        <!--        app:layout_constraintHorizontal_bias="0.0"-->
+        <!--        app:layout_constraintVertical_bias="0.731"-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

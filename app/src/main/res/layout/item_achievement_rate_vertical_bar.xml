@@ -21,30 +21,47 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/progressBar_vertical"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:rotation="270"
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar_vertical"-->
+<!--            style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
 
-            android:maxWidth="120dp"
-            android:minWidth="120dp"
-            android:maxHeight="8dp"
-            android:minHeight="8dp"
+<!--            android:maxWidth="120dp"-->
+<!--            android:minWidth="120dp"-->
+<!--            android:maxHeight="8dp"-->
+<!--            android:minHeight="8dp"-->
+
+<!--            android:max="100"-->
+<!--            android:secondaryProgress="90"-->
+<!--            android:progress="50"-->
+
+<!--            android:progressDrawable="@drawable/progress_tranperency"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/week" />-->
+
+        <ProgressBar
+            android:id="@+id/vertical_progressbar"
+            style="@style/Widget.ProgressBar.Vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:maxHeight="50dp"
+            android:minWidth="10dp"
 
             android:max="100"
             android:secondaryProgress="90"
             android:progress="50"
 
-            android:progressDrawable="@drawable/progress_tranperency"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/week" />
-
-<!--        android:rotation="270"-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
