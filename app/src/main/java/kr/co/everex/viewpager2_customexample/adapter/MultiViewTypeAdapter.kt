@@ -36,7 +36,7 @@ class MultiViewTypeAdapter (
                 SingleTypeViewHolder(view, this.myRecyclerviewInterface!!)
             }
             HorizontalExerciseListModel.MULTI_TYPE -> {
-                view = LayoutInflater.from(parent.context).inflate(R.layout.item_vertical_bar_for_week, parent, false)
+                view = LayoutInflater.from(parent.context).inflate(R.layout.item_achievement_rate_vertical_bar_ver2, parent, false)
                 MultiTypeViewHolder(view, this.myRecyclerviewInterface!!)
             }
             else -> throw RuntimeException("알 수 없는 뷰 타입 에러")
