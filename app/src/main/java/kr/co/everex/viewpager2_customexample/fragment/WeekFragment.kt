@@ -11,6 +11,8 @@ import kr.co.everex.viewpager2_customexample.`interface`.MyRecyclerviewInterface
 import kr.co.everex.viewpager2_customexample.adapter.HorizontalExerciseListAdapter
 import kr.co.everex.viewpager2_customexample.adapter.MultiViewTypeAdapter
 import kr.co.everex.viewpager2_customexample.databinding.FragmentWeekBinding
+import kr.co.everex.viewpager2_customexample.layoutmanager.CenterZoomLayoutManager
+import kr.co.everex.viewpager2_customexample.layoutmanager.ScaleCenterItemLayoutManager
 import kr.co.everex.viewpager2_customexample.model.HorizontalExerciseListModel
 
 
@@ -51,7 +53,9 @@ class WeekFragment : Fragment(), MyRecyclerviewInterface {
         // 리사이클러뷰 설정
         binding.recyclerViewList.apply {
             // 리사이클러뷰 방향 등 설정
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//            layoutManager = ScaleCenterItemLayoutManager(context ,LinearLayoutManager.HORIZONTAL, false)
+            layoutManager = CenterZoomLayoutManager(context ,LinearLayoutManager.HORIZONTAL, false)
+//            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             // 어답터 장착
             adapter = multiViewTypeAdapter
         }
